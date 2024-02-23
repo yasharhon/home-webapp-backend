@@ -7,6 +7,7 @@ RUN pip install tornado
 
 # Mount the application code to the image
 COPY . project
+COPY ./Controls project/Controls
 
 # Set working directory
 WORKDIR /project
