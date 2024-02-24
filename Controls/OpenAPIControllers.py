@@ -12,7 +12,7 @@ class RandomDogController(tornado.web.RequestHandler):
         
         res = wrapper.getData()
         
-        self.write(jsonpickle.encode(res.data, unpicklable=False))
+        self.write(jsonpickle.encode(res, unpicklable=False))
 
 class RandomOpenAPIController(tornado.web.RequestHandler):
     def set_default_headers(self):
@@ -23,4 +23,4 @@ class RandomOpenAPIController(tornado.web.RequestHandler):
 
         res = wrapper.getData()
         
-        self.write(jsonpickle.encode(res.data, unpicklable=False))
+        self.write(jsonpickle.encode(res, unpicklable=False))
