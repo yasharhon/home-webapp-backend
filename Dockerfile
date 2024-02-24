@@ -3,7 +3,7 @@
 FROM python:3.7 AS tornado-server
 
 # Install packages
-RUN pip install tornado
+RUN pip install tornado jsonpickle
 
 # Mount the application code to the image
 COPY . project
