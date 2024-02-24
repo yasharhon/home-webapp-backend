@@ -9,6 +9,10 @@ RUN pip install tornado
 COPY . project
 COPY ./Controls project/Controls
 
+# Mount and install packages
+COPY packages project/packages
+RUN pip install project/packages/*.whl
+
 # Set working directory
 WORKDIR /project
 
